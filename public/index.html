@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Ecommerce</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sm:p-4  shadow-md text-white overflow-hidden">
+        <!-- Header top -->
+        <div class="hidden container sm:flex items-center justify-between space-x-4">
+            <!-- Logo -->
+            <div class="logo px-2">
+                <a href="#" class="text-sm w-32 sm:text-2xl text-theme-secondary">Ecommerce</a>
+            </div>
+            <!-- search -->
+            <div class="search w-full relative max-w-xl flex">
+                <span class="absolute top-3 left-4 text-gray-400 text-lg">
+                    <i class="fa fa-search"></i>
+                </span>
+                <input type="text" class="md:flex-1 sm:w-2/3 border border-theme-primary border-r-0 pl-8 sm:pl-10 md:pl-12 pr-3 py-3 rounded-1-md focus:outline-none text-theme-secondary" placeholder="Search Product">
+                <button class="border border-theme-primary rounded-r-md bg-theme-primary hover:bg-transparent hover:text-theme-primary text-white py-3 transition sm:px-4 md:px-8">Search</button>
+            </div>
+            <!-- cart item -->
+            <div class="cart-item flex items-center space-x-4 text-theme-secondary">
+                <a href="#" class="relative text-center  hover:text-theme-primary transition">
+                    <div class="text-sm sm:text-2xl">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <p class="">WishList</p>
+                    <span class="absolute -top-1 right-3 h-5 w-5 rounded-full bg-theme-primary text-white flex items-center justify-center text-xs">8</span>
+                </a>
+                <a href="#" class="relative text-center hover:text-theme-primary transition">
+                    <div class="text-sm sm:text-2xl">
+                        <i class="fa fa-shopping-bag"></i>
+                    </div>
+                    <p class="">Cart</p>
+                    <span class="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-theme-primary text-white flex items-center justify-center text-xs">8</span>
+                </a>
+                <a href="#" class="relative text-center hover:text-theme-primary transition">
+                    <div class="text-sm sm:text-2xl">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <p class="">Account</p>
+                </a>
+            </div>
+        </div>
+        <!-- End Header top -->
+
+        <!-- Mobile Header Top -->
+        <div class="m-header sm:hidden container bg-theme-primary flex items-center justify-between py-3 px-8">
+            <!-- category -->
+            <div class="sm:hidden flex justify-start items-center">
+                <i class="text-2xl fas fa-bars"></i>
+            </div>
+            <!-- logo -->
+            <div class="logo px-2">
+                <a href="#" class="text-3xl w-32 text-theme-secondary">Ecommerce</a>
+            </div>
+            <!-- cart -->
+            <div class="cart-item flex items-center text-white">
+                <a href="#" class="relative text-center  hover:text-theme-primary transition">
+                    <div class="text-lg sm:text-2xl">
+                        <i class="fa fa-shopping-cart"></i>
+                    </div>
+                    <span class="absolute -top-2 -right-4 h-5 w-5 rounded-full bg-theme-secondary text-white flex items-center justify-center text-xs">8</span>
+                </a>
+            </div>
+        </div>
+        <!-- Mobile Header Top End -->
+    </header>
+
+        <!-- Navbar -->
+        <nav class="bg-theme-secondary hidden sm:block">
+            <div class="container flex">
+                <div class="category px-8 py-4 flex items-center cursor-pointer bg-theme-primary text-white relative group">
+                    <span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <span class="ml-2 capitalize">All Category</span>
+                    <div class="catlist absolute w-full top-full left-0 bg-white shadow-md divide-y divide-dashed divide-theme-grey opacity-0 group-hover:opacity-100 invisible group-hover:visible transition duration-300">
+                        <a href="#" class="px-6 py-3 flex items-center text-theme-secondary hover:bg-theme-primary hover:text-white">
+                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve"><path d="M510.417 210.76c-4.698-19.198-20.897-34.833-40.305-38.896a55.25 55.25 0 0 0-11.886-1.159c-37.112-56.479-104.896-85.372-202.21-85.372-97.635 0-165.523 28.962-202.51 85.6-12.656.009-24.99 4.167-34.713 12.431A53.282 53.282 0 0 0 0 224c0 16.677 8.042 32.427 21.335 42.448v74.885c0 23.531 19.137 42.667 42.669 42.667v10.667c0 17.646 14.355 32 32.002 32s32.002-14.354 32.002-32V384h256.016v10.667c0 17.646 14.355 32 32.002 32 17.647 0 32.002-14.354 32.002-32V384c23.533 0 42.669-19.135 42.669-42.667v-74.875c17.053-12.791 24.918-34.416 19.72-55.698zM256 106.667c85.625 0 145.768 23.478 179.749 69.255-3.773 1.794-7.378 3.978-10.686 6.661-12.542 10.188-19.729 25.281-19.729 41.417v32h-128c-8.225 0-15.659 3.206-21.333 8.323-5.674-5.117-13.108-8.323-21.333-8.323h-128v-29.719c0-21.911-12.536-41.307-30.646-50.236C109.9 130.191 170.12 106.667 256 106.667zM426.667 288c0 5.885-4.781 10.667-10.667 10.667H277.333c-5.885 0-10.667-4.781-10.667-10.667s4.781-10.667 10.667-10.667H416c5.885 0 10.667 4.782 10.667 10.667zm-181.334 0c0 5.885-4.781 10.667-10.667 10.667H96c-5.885 0-10.667-4.781-10.667-10.667S90.115 277.333 96 277.333h138.667c5.885 0 10.666 4.782 10.666 10.667zM106.667 394.667c0 5.885-4.781 10.667-10.667 10.667s-10.667-4.781-10.667-10.667V384h21.333v10.667zm320 0c0 5.885-4.781 10.667-10.667 10.667-5.885 0-10.667-4.781-10.667-10.667V384h21.333v10.667zm47.968-143.136a10.66 10.66 0 0 0-5.302 9.219v80.583c0 11.76-9.573 21.333-21.333 21.333H64c-11.76 0-21.333-9.573-21.333-21.333V260.75c0-3.792-2.021-7.302-5.302-9.219-10.042-5.843-16.032-16.135-16.032-27.531a31.975 31.975 0 0 1 11.281-24.385c7.281-6.188 16.625-8.729 26.167-7.167 15.135 2.458 26.552 17.01 26.552 33.833v31.684C72.944 262.383 64 274.112 64 288c0 17.646 14.354 32 32 32h138.667c8.225 0 15.659-3.206 21.333-8.323 5.674 5.117 13.108 8.323 21.333 8.323H416c17.646 0 32-14.354 32-32 0-13.888-8.944-25.617-21.333-30.035V224c0-9.688 4.313-18.74 11.844-24.854 7.635-6.198 17.323-8.479 27.198-6.406 11.542 2.417 21.167 11.698 23.948 23.083 3.51 14.344-2.386 28.354-15.022 35.708z"/></svg>
+                            <span class="text-sm ml-3">Sofa</span>
+                        </a>
+                        <a href="#" class="px-6 py-3 flex items-center text-theme-secondary hover:bg-theme-primary hover:text-white">
+                            <svg class="h-5 w-5" height="512" viewBox="0 0 64 64" width="512" xmlns="http://www.w3.org/2000/svg"><path d="M58.888 42.617a11.3 11.3 0 0 1-10.055 1.44 1 1 0 0 0-.915.127l-4.5 3.191 1.158 1.631 4.083-2.9a13.366 13.366 0 0 0 11.345-1.833 14.191 14.191 0 0 0 1.671-1.322l-1.356-1.47a12.051 12.051 0 0 1-1.431 1.136z"/><path d="M48.818 27.693a9.093 9.093 0 0 0-4.141 8.672L32 44.491 19.321 36.37a9.052 9.052 0 0 0-4.145-8.67 9.561 9.561 0 0 0-6.52-1.626 7.4 7.4 0 0 0-6.378 9.454 9.554 9.554 0 0 0 3.951 5.432 9.05 9.05 0 0 0 9.6.593l9.841 6.987-9.365 6.005a3.919 3.919 0 0 0-1.142 5.507 3.926 3.926 0 0 0 5.525 1L32 53.03l11.312 8.028a3.93 3.93 0 1 0 4.388-6.514l-9.376-6 9.848-6.99a9.05 9.05 0 0 0 9.6-.591c4.11-2.774 5.452-8.008 2.989-11.668s-7.824-4.376-11.943-1.602zM19.53 59.425a1.974 1.974 0 0 1-2.712-.495 1.921 1.921 0 0 1 .561-2.7l10.049-6.444 2.839 2.014zm27.94-1.963a1.93 1.93 0 0 1-3.006 1.965l-28.039-19.9a1 1 0 0 0-1.168.008 6.93 6.93 0 0 1-7.91-.233 7.562 7.562 0 0 1-3.136-4.29 5.4 5.4 0 0 1 4.7-6.959 7.563 7.563 0 0 1 5.152 1.3 6.93 6.93 0 0 1 3.174 7.247 1 1 0 0 0 .43 1.087l28.954 18.542a1.912 1.912 0 0 1 .849 1.233zM56.65 39.3a6.931 6.931 0 0 1-7.911.231 1 1 0 0 0-1.168-.008l-11.063 7.854-2.652-1.7 12.474-8a1 1 0 0 0 .43-1.085 6.965 6.965 0 0 1 3.178-7.247c3.2-2.157 7.314-1.681 9.163 1.058s.748 6.74-2.451 8.897zM12.927 3.833 11.82 2.167a13 13 0 0 0-5.077 15.167l1.885-.668a11 11 0 0 1 4.3-12.833zM10.75 20.268A11.125 11.125 0 0 1 9.476 18.5l-1.731 1a13.115 13.115 0 0 0 1.505 2.09z"/><path d="m42.98 36.2 2.847-14.234A9 9 0 0 0 45 4a8.888 8.888 0 0 0-5.568 1.935 8.986 8.986 0 0 0-14.864 0A8.888 8.888 0 0 0 19 4a9 9 0 0 0-.827 17.962L21.02 36.2l1.96-.392L22.42 33h19.16l-.56 2.8zM38.153 31l.837-5.858-1.98-.284L36.133 31H33V20h-2v11h-3.133l-.877-6.142-1.98.284.837 5.858H22.02l-2.04-10.2A1 1 0 0 0 19 20a7 7 0 0 1 0-14 6.931 6.931 0 0 1 5.083 2.2 1 1 0 0 0 1.626-.25 6.986 6.986 0 0 1 12.582 0 1 1 0 0 0 1.626.25A6.931 6.931 0 0 1 45 6a7 7 0 0 1 0 14 1 1 0 0 0-.98.8L41.98 31z"/></svg>
+                            <span class="text-sm ml-3">Furniture</span>
+                        </a>
+                        <a href="#" class="px-6 py-3 flex items-center text-theme-secondary hover:bg-theme-primary hover:text-white">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve"><path d="M508.88 219.58a9.997 9.997 0 0 0-3.378-5.838c-16.56-14.009-19.356-29.456-21.603-41.867l-.294-1.617a10 10 0 0 0-8.442-8.1 33.395 33.395 0 0 0-4.631-.313c-9.517 0-22.925 4.01-31.426 12.967a10.008 10.008 0 0 0-2.659 5.566c-.715 5.374-1.083 10.292-1.407 14.631-1.225 16.351-2.308 18.085-7.289 19.661a10 10 0 0 0-6.533 6.567c-4.691 15.102-10.916 29.554-18.45 43.189-3.721-7.104-7.833-13.494-11.66-19.44-9.36-14.542-16.754-26.03-14.228-40.267 8.186-46.144 4.031-80.904-12.353-103.316-9.124-12.481-22.122-20.99-37.918-24.965 3.144-24.532 20.192-35.654 29.629-38.183 5.335-1.429 8.501-6.913 7.071-12.248-1.43-5.334-6.914-8.503-12.247-7.071-19.485 5.221-40.298 24.388-44.273 55.002-15.96-.045-30.455 4.829-42.383 14.359-21.796 17.415-34.965 49.777-39.142 96.185-1.257 13.965-10.291 22.113-22.796 33.388-10.207 9.204-21.577 19.48-30.685 35.015a123.871 123.871 0 0 0-36.223-8.702c3.602-23.552 20.167-34.306 29.421-36.785 5.335-1.429 8.501-6.913 7.071-12.247-1.43-5.335-6.914-8.503-12.247-7.071-5.025 1.346-10.136 3.631-15.027 6.789-2.275-11.229-7.779-21.761-16.113-30.094-11.166-11.166-26.013-17.315-41.805-17.315-5.169 0-10.317.675-15.302 2.005a10 10 0 0 0-7.081 7.081c-5.433 20.346.433 42.228 15.309 57.107 10.351 10.351 23.87 16.381 38.37 17.208a74.942 74.942 0 0 0-2.75 13.212C50.957 248.915 0 302.899 0 368.563c0 68.839 56.005 124.844 124.843 124.844 25.584 0 49.954-7.604 70.817-22.028a282.957 282.957 0 0 0 9.895 4.136c30.096 11.871 60.512 17.891 90.401 17.891 48.076 0 92.696-15.708 129.036-45.427 37.983-31.063 65.977-77.026 80.953-132.92 4.887-18.23 9.198-61.184 2.935-95.479zm-293.017 13.144c13.451-12.13 27.36-24.673 29.321-46.448 3.669-40.765 14.336-68.473 31.707-82.352 10.312-8.239 23.058-11.416 37.888-9.434 14.646 1.955 25.952 8.252 33.603 18.718 13.04 17.838 16.003 47.452 8.805 88.018-3.897 21.961 6.779 38.546 17.103 54.586 5.786 8.989 11.742 18.258 15.792 29.046-33.703 48.67-84.844 84.163-141.117 97.16.48-4.462.724-8.957.724-13.455 0-45.109-24.051-84.706-60.001-106.647 7.482-12.314 16.956-20.878 26.175-29.192zM93.926 199.51c-8.401-8.402-12.459-20.183-11.233-31.831a39.628 39.628 0 0 1 4.165-.221c10.449 0 20.274 4.069 27.662 11.457 8.402 8.402 12.461 20.184 11.234 31.831-1.381.146-2.771.22-4.162.22h-.002c-10.452.001-20.276-4.068-27.664-11.456zm30.917 273.897C67.032 473.407 20 426.375 20 368.563s47.032-104.844 104.843-104.844c57.812 0 104.845 47.032 104.845 104.844 0 5.764-.471 11.518-1.402 17.179-6.433.83-12.91 1.357-19.417 1.579a85.9 85.9 0 0 0 2.086-18.758 85.703 85.703 0 0 0-6.44-32.675c-2.095-5.108-7.934-7.554-13.047-5.457-5.109 2.096-7.553 7.937-5.457 13.047a65.781 65.781 0 0 1 4.944 25.085c0 6.288-.891 12.465-2.633 18.446-14.312-.921-28.645-3.286-42.767-7.07a10.001 10.001 0 0 0-8.377 1.505c-8.888 6.31-17.846 14.247-23.158 29.465a10.001 10.001 0 0 0 3.01 10.954c18.37 15.431 37.563 28.512 57.333 39.131-15.133 8.151-31.983 12.413-49.52 12.413zm361.784-163.523c-27.437 102.393-98.715 163.523-190.67 163.523-53.682 0-110.347-22.009-160.292-62.119 2.647-4.752 5.92-8.023 9.437-10.815 18.778 4.633 37.874 6.979 56.837 6.979 53.669 0 105.418-18.289 149.652-52.89 22.489-17.591 41.98-38.788 57.593-62.292a9.9 9.9 0 0 0 .522-.78c12.325-18.699 22.197-38.846 29.159-59.796 14.015-7.052 15.084-21.336 16.121-35.192.237-3.167.48-6.415.851-9.842 2.66-1.926 6.185-3.451 9.719-4.235 2.665 12.715 7.847 29.036 24.222 44.107 4.633 29.462 1.269 66.855-3.151 83.352z"/><path d="M322.502 115.069c-5.09-2.132-10.953.263-13.089 5.356s.261 10.953 5.355 13.089c7.275 3.05 11.292 25.001 4.894 61.054-.965 5.438 2.661 10.629 8.1 11.594a10.05 10.05 0 0 0 1.759.156c4.757 0 8.975-3.408 9.835-8.254 5.722-32.24 7.442-72.809-16.854-82.995zM388.602 401.291c-3.313-4.419-9.592-5.306-14.01-1.991l-.05.036c-4.454 3.261-5.403 9.501-2.146 13.957a9.982 9.982 0 0 0 8.08 4.089 9.987 9.987 0 0 0 5.909-1.93l.229-.169c4.418-3.314 5.302-9.573 1.988-13.992zM365.653 417.462c-2.517-4.916-8.541-6.863-13.458-4.348-34.227 17.508-63.104 16.815-63.53 16.796-5.497-.191-10.141 4.093-10.357 9.603-.216 5.518 4.082 10.167 9.601 10.383.153.006.691.024 1.584.024 7.147 0 36.934-1.161 71.81-19.002 4.917-2.513 6.864-8.539 4.35-13.456zM186.042 307.983l-.329-.33c-3.915-3.893-10.246-3.878-14.142.038-3.895 3.916-3.878 10.248.038 14.143l.215.215a9.965 9.965 0 0 0 7.109 2.967 9.97 9.97 0 0 0 7.033-2.891c3.926-3.883 3.96-10.216.076-14.142z"/></svg>
+                            <span class="text-sm ml-3">Fruit</span>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="menu-credentials flex justify-between items-center flex-grow md:pl-12 text-gray-200 sm:pl-4">
+                    <div class="menu flex-1 items-center sm:space-x-2 md:space-x-6 capitalize ">
+                        <a href="#" class="hover:text-theme-primary transition">Home</a>
+                        <a href="#" class="hover:text-theme-primary transition">Shop</a>
+                        <a href="#" class="hover:text-theme-primary transition">About Us</a>
+                        <a href="#" class="hover:text-theme-primary transition">Contact Us</a>
+                    </div>
+                    <div class="credentials"></div>
+                        <a href="#" class="hover:text-theme-primary transition">Login/Registration</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End-->
+
+        <!-- Hero -->
+        <section class="py-36 bg-cover bg-no-repeat bg-center" style="background-image: url(./img/c.jpg);">
+            <div class="container">
+                <h1 class="capitalize text-6xl mb-4 font-Roboto font-medium text-white">Lorem ipsum is <br> used in the graphic.</h1>
+                <p class="text-md text-white">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                <button class="btn uppercase text-lg mt-4">Order now</button>
+            </div>
+        </section>
+</body>
+</html>
