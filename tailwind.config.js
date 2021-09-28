@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      height:{
+        "77vh" : "77vh",
+      },
       colors: {
         "theme-purple": "#5267DF",
         "theme-red": "#FA5959",
@@ -29,7 +32,8 @@ module.exports = {
   },
   variants: {
     extend: {
-      visibility:['group-hover']
+      visibility:['group-hover'],
+      scale: ['active', 'group-hover'],
     },
   },
   plugins: [],

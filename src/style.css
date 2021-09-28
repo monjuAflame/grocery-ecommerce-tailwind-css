@@ -13,8 +13,8 @@
         @apply font-Roboto
     }
 }
-.btn {
-    @apply px-6 py-3 bg-theme-primary text-white border-theme-primary rounded-md shadow-md transition duration-300
+.btn-primary {
+    @apply text-sm border bg-theme-primary text-white border-theme-primary rounded-md shadow-md transition duration-300
 }
 
 
