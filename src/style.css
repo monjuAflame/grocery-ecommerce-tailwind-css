@@ -16,6 +16,17 @@
 .btn-primary {
     @apply text-sm border bg-theme-primary text-white border-theme-primary rounded-md shadow-md transition duration-300
 }
+.btn-secondary {
+    @apply text-sm border bg-theme-white text-theme-grey border-theme-grey rounded-md shadow-md transition duration-300
+}
+@layer components{
+    .size-selector input:checked + label {
+        @apply bg-theme-primary text-white
+    }
 
+    .color-slector input:checked + label {
+        @apply ring ring-theme-primary
+    }
+}
 
 

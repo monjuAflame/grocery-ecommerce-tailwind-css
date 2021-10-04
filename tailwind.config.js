@@ -34,7 +34,10 @@ module.exports = {
     extend: {
       visibility:['group-hover'],
       scale: ['active', 'group-hover'],
+      gridColumn: ['responsive', 'hover'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
